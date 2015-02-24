@@ -1,3 +1,5 @@
+CAUTION: This library is not ready for public use yet.
+
 # canon-react
 React components for Rackspace's Canon framework
 
