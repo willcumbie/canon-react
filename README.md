@@ -15,3 +15,13 @@ To build a demo bundle for testing run `npm run demo-build` and open `canon-reac
 ### Testing
 To run tests with phantom run `npm run test`
 To run tests in chrome and watch for changes run `npm run test-watch`
+
+# Roadmap
+This is a list of what is planned for the next release
+## v 0.1.0
+1. Buttons
+2. Button Groups
+3. Status Indicators
+4. Tooltips
+5. Progress Bars
+6. Multi Step Progress Bars
