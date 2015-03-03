@@ -6,12 +6,16 @@ describe('Tooltip', function () {
 
   beforeEach(function () {
     tooltip = TestUtils.renderIntoDocument(
-      <Tooltip>some text</Tooltip>
+      <Tooltip className='test-class'>some text</Tooltip>
     );
   });
 
   it('has the rs-tooltip class', function () {
     expect(tooltip.getDOMNode()).toHaveClass('rs-tooltip');
+  });
+
+  it('copies passed in class names', function () {
+    expect(tooltip.getDOMNode()).toHaveClass('test-class');
   });
 
   it('renders children', function () {

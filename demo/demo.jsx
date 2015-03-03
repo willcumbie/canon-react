@@ -2,6 +2,8 @@ var Button = require('./Button');
 var ButtonGroup = require('./ButtonGroup');
 var ProcessingIndicator = require('./ProcessingIndicator');
 var ProgressBar = require('./ProgressBar');
+var Tooltip = require('./Tooltip');
+var TooltipTrigger = require('./TooltipTrigger');
 
 (function () {
   React.render(
@@ -177,6 +179,17 @@ var ProgressBar = require('./ProgressBar');
           <ProgressBar progress={25} size='large'/>
           <br/>
           <ProgressBar progress={25} size='xlarge'/>
+        </div>
+      </div>
+
+      <div className='rs-detail-section'>
+        <div className='rs-detail-section-header'>
+          <h2>Tooltips</h2>
+        </div>
+        <div className='rs-detail-section-body'>
+          <TooltipTrigger overlay={<Tooltip>Tooltip text</Tooltip>}>
+            <i className='rs-icon-help'></i>
+          </TooltipTrigger>
         </div>
       </div>
     </div>,
