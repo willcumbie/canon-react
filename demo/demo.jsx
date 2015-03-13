@@ -3,7 +3,7 @@ var ButtonGroup = require('./ButtonGroup');
 var ProcessingIndicator = require('./ProcessingIndicator');
 var ProgressBar = require('./ProgressBar');
 var Tooltip = require('./Tooltip');
-var TooltipTrigger = require('./TooltipTrigger');
+var TooltipOverlay = require('./TooltipOverlay');
 
 (function () {
   React.render(
@@ -187,9 +187,9 @@ var TooltipTrigger = require('./TooltipTrigger');
           <h2>Tooltips</h2>
         </div>
         <div className='rs-detail-section-body'>
-          <TooltipTrigger overlay={<Tooltip>Tooltip text</Tooltip>}>
+          <TooltipOverlay overlay={<Tooltip>Tooltip text</Tooltip>}>
             <i className='rs-icon-help'></i>
-          </TooltipTrigger>
+          </TooltipOverlay>
         </div>
       </div>
     </div>,

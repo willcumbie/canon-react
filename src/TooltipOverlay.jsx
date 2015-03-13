@@ -1,4 +1,4 @@
-var TooltipTrigger = React.createClass({
+var TooltipOverlay = React.createClass({
 
   getInitialState: function () {
     return {
@@ -11,9 +11,13 @@ var TooltipTrigger = React.createClass({
   updateOverlayPosition: function () {
     var overlayTop, overlayLeft, documentElement, box;
 
-    documentElement = document.documentElement;
+    box = { top: 0, left: 0 };
+    if ( typeof this.getDOMNode().getBoundingClientRect !== 'undefined' ) {
+      box = this.getDOMNode().getBoundingClientRect();
+    }
     box = this.getDOMNode().getBoundingClientRect();
 
+    documentElement = document.documentElement;
     overlayTop = box.top + window.pageYOffset - documentElement.clientTop;
     overlayLeft = box.left + window.pageXOffset - documentElement.clientLeft;
     
@@ -45,9 +49,9 @@ var TooltipTrigger = React.createClass({
     children = React.addons.cloneWithProps(this.props.children, hoverProps);
     overlay = React.addons.cloneWithProps(this.props.overlay, overlayProps);
     return (
-      <div>{children}{overlay}</div>
+      <div {...this.props}>{children}{overlay}</div>
     );
   }
 });
 
-module.exports = TooltipTrigger;
+module.exports = TooltipOverlay;

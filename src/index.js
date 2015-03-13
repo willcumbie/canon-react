@@ -4,5 +4,5 @@ module.exports = {
   ProcessingIndicator: require('./ProcessingIndicator'),
   ProgressBar: require('./ProgressBar'),
   Tooltip: require('./Tooltip'),
-  TooltipTrigger: require('./TooltipTrigger')
+  TooltipOverlay: require('./TooltipOverlay')
 };
