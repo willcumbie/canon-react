@@ -15,4 +15,3 @@ To build a demo bundle for testing run `npm run demo-build` and open `canon-reac
 ### Testing
 To run tests with phantom run `npm run test`
 To run tests in chrome and watch for changes run `npm run test-watch`
-
