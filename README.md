@@ -22,6 +22,4 @@ This is a list of what is planned for the next release
 1. Buttons
 2. Button Groups
 3. Status Indicators
-4. Tooltips
 5. Progress Bars
-6. Multi Step Progress Bars
