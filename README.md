@@ -21,5 +21,4 @@ This is a list of what is planned for the next release
 ## v 0.1.0
 1. Buttons
 2. Button Groups
-3. Status Indicators
-5. Progress Bars
+3. Progress Bars
