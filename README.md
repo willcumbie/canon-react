@@ -18,7 +18,10 @@ To run tests in chrome and watch for changes run `npm run test-watch`
 
 # Roadmap
 This is a list of what is planned for the next release
-## v 0.1.0
-1. Buttons
-2. Button Groups
-3. Progress Bars
+## v 0.2.0
+1. Action Button
+2. Action Dropdown
+3. Popovers
+4. Status Indicator
+5. Tooltips
+6. NPM Module
