@@ -20,6 +20,9 @@
   "main": "dist/canon-react.min.js",
   "author": "Adam Pickeral <adam.pickeral@rackspace.com>",
   "license": "MIT",
+  "dependencies": {
+    "tether": "1.0.2"
+  },
   "peerDependencies": {
     "react": ">=0.13.2"
   },
