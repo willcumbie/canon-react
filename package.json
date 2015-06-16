@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Rackspace Canon components built with React",
   "scripts": {
+    "prepublish": "./prepublish.sh",
     "build": "./node_modules/.bin/grunt build",
     "demo-build": "./node_modules/.bin/grunt demo-build",
     "test-watch": "./node_modules/.bin/grunt watch 2>&1 >/dev/null & ./node_modules/karma/bin/karma start karma.dev.js",
