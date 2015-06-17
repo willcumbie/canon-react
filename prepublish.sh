@@ -2,7 +2,7 @@
 
 set -o errexit
 
-rm -rf dist
+rm -rf dist || true
 mkdir dist
 npm run build
 mv canon-react.js ./dist
