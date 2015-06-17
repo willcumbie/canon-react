@@ -8,7 +8,7 @@ describe('ButtonGroup', function () {
 
   beforeEach(function () {
     buttonGroup = TestUtils.renderIntoDocument(
-      <ButtonGroup id='button-group'>
+      <ButtonGroup className='test-class' id='button-group'>
         <Button className='child-button'>Test</Button>
       </ButtonGroup>
     );
@@ -20,6 +20,10 @@ describe('ButtonGroup', function () {
 
   it('renders passed in props', function () {
     expect(buttonGroup.getDOMNode().id).toBe('button-group');
+  });
+
+  it('renders passed in classes', function () {
+    expect(buttonGroup.getDOMNode()).toHaveClass('test-class');
   });
 
   it('renders passed in children', function () {
