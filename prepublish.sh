@@ -3,7 +3,7 @@
 rm -rf dist
 mkdir dist
 npm run build
-mv canon-react.js ./dist
+rm canon-react.js
 mv canon-react.min.js ./dist
 rm -rf test-built
 rm test_bundle.js
