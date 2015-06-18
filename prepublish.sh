@@ -1,6 +1,5 @@
 #!/bin/bash
 
-mkdir -p dist
 rm -rf dist
 mkdir dist
 npm run build

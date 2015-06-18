@@ -7,4 +7,4 @@ prepublish.sh
 src
 test
 test-results.xml
-transpiled/*
+transpiled
