@@ -17,7 +17,7 @@
     "react",
     "canon"
   ],
-  "main": "dist/canon-react.min.js",
+  "main": "src/index.js",
   "author": "Adam Pickeral <adam.pickeral@rackspace.com>",
   "license": "MIT",
   "peerDependencies": {
