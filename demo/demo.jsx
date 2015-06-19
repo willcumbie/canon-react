@@ -1,7 +1,7 @@
-var Button = require('./Button');
-var ButtonGroup = require('./ButtonGroup');
-var ProcessingIndicator = require('./ProcessingIndicator');
-var ProgressBar = require('./ProgressBar');
+import Button from './Button';
+import ButtonGroup from './ButtonGroup';
+import ProcessingIndicator from './ProcessingIndicator';
+import ProgressBar from './ProgressBar';
 
 (function () {
   React.render(
