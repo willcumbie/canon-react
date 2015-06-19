@@ -1,4 +1,5 @@
 var ProcessingIndicator = require('../transpiled/ProcessingIndicator');
+var React = require('react/addons');
 var TestUtils = React.addons.TestUtils;
 
 describe('ProcessingIndicator', function () {

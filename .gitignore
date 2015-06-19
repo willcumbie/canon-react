@@ -1,5 +1,9 @@
+canon-react.js
+canon-react.min.js
 node_modules
-transpiled/*
+demo/bundle.js
+dist
+transpiled
 test_bundle.js
-test-built/*
+test-built
 test-results.xml
