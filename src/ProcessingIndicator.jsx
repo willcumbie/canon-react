@@ -9,7 +9,7 @@ var ProcessingIndicator = React.createClass({
 
   render: function () {
     var classes;
-    
+
     classes = 'rs-processing-indicator';
 
     if (this.props.hidden) {

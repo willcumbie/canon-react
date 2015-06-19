@@ -59,23 +59,23 @@ describe('ProgressBar', function () {
 
     it('error', function () {
       renderWithStatus('error');
-      
+
       expect(statusBar.getDOMNode()).toHaveClass('rs-status-error');
     });
 
     it('warning', function () {
       renderWithStatus('warning');
-      
+
       expect(statusBar.getDOMNode()).toHaveClass('rs-status-warning');
     });
 
     it('info', function () {
       renderWithStatus('info');
-      
+
       expect(statusBar.getDOMNode()).toHaveClass('rs-status-info');
     });
   });
-  
+
   describe('type', function () {
     var statusBar;
 
