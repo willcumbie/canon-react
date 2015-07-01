@@ -14,6 +14,12 @@ describe('ButtonGroup', function () {
     );
   });
 
+  afterEach(function () {
+    if (buttonGroup.isMounted()) {
+      React.unmountComponentAtNode(React.findDOMNode(buttonGroup).parentNode);
+    }
+  });
+
   it('has the rs-btn-group class', function () {
     expect(buttonGroup.getDOMNode()).toHaveClass('rs-btn-group');
   });
