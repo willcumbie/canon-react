@@ -1,26 +1,94 @@
 var React = require('react');
 
 //Enable these to test current Canon React Version Components
-var CanonReact = require('canon-react');
-var Button = CanonReact.Button;
-var ButtonGroup = CanonReact.ButtonGroup;
-var ProgressBar = CanonReact.ProgressBar;
-var ProcessingIndicator = CanonReact.ProgressBar;
-var Popover = CanonReact.Popover;
-var PopoverBody = CanonReact.PopoverBody;
-var PopoverFooter = CanonReact.PopoverFooter;
-var PopoverTrigger = CanonReact.PopoverTrigger;
+// var CanonReact = require('canon-react');
+// var Button = CanonReact.Button;
+// var ButtonGroup = CanonReact.ButtonGroup;
+// var Divider = CanonReact.Divider;
+// var Dropdown = CanonReact.Dropdown;
+// var DropdownItem = CanonReact.DropdownItem;
+// var DropdownTrigger = CanonReact.DropdownTrigger;
+// var ProgressBar = CanonReact.ProgressBar;
+// var ProcessingIndicator = CanonReact.ProgressBar;
+// var Popover = CanonReact.Popover;
+// var PopoverBody = CanonReact.PopoverBody;
+// var PopoverFooter = CanonReact.PopoverFooter;
+// var PopoverTrigger = CanonReact.PopoverTrigger;
 
 //Enable these to test your local changes to components (for developers)
-// var Button = require('./Button');
-// var ButtonGroup = require('./ButtonGroup');
-// var ProcessingIndicator = require('./ProcessingIndicator');
-// var ProgressBar = require('./ProgressBar');
-// var Popover = require('./Popover');
-// var PopoverBody = require('./PopoverBody');
-// var PopoverFooter = require('./PopoverFooter');
-// var PopoverTrigger = require('./PopoverTrigger');
-// var ProcessingIndicator = require('./ProcessingIndicator');
+var Button = require('./Button');
+var ButtonGroup = require('./ButtonGroup');
+var Divider = require('./Divider');
+var Dropdown = require('./Dropdown');
+var DropdownItem = require('./DropdownItem');
+var DropdownTrigger = require('./DropdownTrigger');
+var ProcessingIndicator = require('./ProcessingIndicator');
+var ProgressBar = require('./ProgressBar');
+var Popover = require('./Popover');
+var PopoverBody = require('./PopoverBody');
+var PopoverFooter = require('./PopoverFooter');
+var PopoverTrigger = require('./PopoverTrigger');
+var ProcessingIndicator = require('./ProcessingIndicator');
+
+var DemoPrimaryDropdown = React.createClass({
+  render: function () {
+    return (
+      <Dropdown type='primary'>
+        <DropdownItem type='category'>Infrastructure</DropdownItem>
+        <DropdownItem type='link'>Servers</DropdownItem>
+        <DropdownItem type='link'>Load Balancers</DropdownItem>
+        <DropdownItem type='link'>DNS</DropdownItem>
+        <DropdownItem type='category'>Automation</DropdownItem>
+        <DropdownItem type='link' enabled={false}>Deployments</DropdownItem>
+        <DropdownItem type='link'>Autoscaling</DropdownItem>
+        <DropdownItem type='category'>Developer Tools</DropdownItem>
+        <DropdownItem type='link'>Queues</DropdownItem>
+        <DropdownItem type='link'>Mailgun <i class="rs-icon-external"/></DropdownItem>
+      </Dropdown>
+    );
+  }
+});
+
+var DemoUtilityDropdown = React.createClass({
+  render: function () {
+    return (
+      <Dropdown type='utility'>
+        <DropdownItem type='text'>Account# 1234567</DropdownItem>
+        <Divider/>
+        <DropdownItem type='link'>Billing</DropdownItem>
+        <DropdownItem type='link'>Usage</DropdownItem>
+        <DropdownItem type='link' enabled={false}>User Management</DropdownItem>
+        <DropdownItem type='link'>Settings</DropdownItem>
+        <Divider/>
+        <DropdownItem type='link'>Logout</DropdownItem>
+      </Dropdown>
+    );
+  }
+});
+
+var DemoActionMenu = React.createClass({
+  render: function () {
+    return (
+      <Dropdown type='action'>
+        <DropdownItem type='category'>Identify</DropdownItem>
+        <DropdownItem type='link'>Rename Server...</DropdownItem>
+        <DropdownItem type='link'>Tag Server...</DropdownItem>
+        <DropdownItem type='category'>Image</DropdownItem>
+        <DropdownItem type='link'>Create Image...</DropdownItem>
+        <DropdownItem type='link'>Schedule Daily Image...</DropdownItem>
+        <DropdownItem type='category'>Recover</DropdownItem>
+        <DropdownItem type='link'>Rebuild From Image...</DropdownItem>
+        <DropdownItem type='link' enabled={false}>Enter Rescue Mode...</DropdownItem>
+        <DropdownItem type='category'>Manage</DropdownItem>
+        <DropdownItem type='link'>Connect Via Terminal...</DropdownItem>
+        <DropdownItem type='link'>Reboot Server...</DropdownItem>
+        <DropdownItem type='link'>Resize Server...</DropdownItem>
+        <DropdownItem type='link' enabled={false}>Change Password...</DropdownItem>
+        <DropdownItem type='link'>Delete Server...</DropdownItem>
+      </Dropdown>
+    );
+  }
+});
 
 var DemoPopover = React.createClass({
   propType: {
@@ -260,6 +328,25 @@ var DemoPopover = React.createClass({
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+
+      <div className='rs-detail-section'>
+        <div className='rs-detail-section-header'>
+          <h2>Dropdowns</h2>
+        </div>
+        <div className='rs-detail-section-body'>
+          <ButtonGroup>
+            <DropdownTrigger dropdown={<DemoPrimaryDropdown/>}>
+              <Button>Primary Dropdown</Button>
+            </DropdownTrigger>
+            <DropdownTrigger dropdown={<DemoUtilityDropdown/>}>
+              <Button>Utility Dropdown</Button>
+            </DropdownTrigger>
+            <DropdownTrigger dropdown={<DemoActionMenu/>}>
+              <Button>Action Menu</Button>
+            </DropdownTrigger>
+          </ButtonGroup>
         </div>
       </div>
     </div>,
