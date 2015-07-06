@@ -1,17 +1,18 @@
 var React = require('react');
 
 //Enable these to test current Canon React Version Components
-var CanonReact = require('canon-react');
-var Button = CanonReact.Button;
-var ButtonGroup = CanonReact.ButtonGroup;
-var ProgressBar = CanonReact.ProgressBar;
-var ProcessingIndicator = CanonReact.ProgressBar;
+// var CanonReact = require('canon-react');
+// var Button = CanonReact.Button;
+// var ButtonGroup = CanonReact.ButtonGroup;
+// var ProgressBar = CanonReact.ProgressBar;
+// var ProcessingIndicator = CanonReact.ProgressBar;
 
 //Enable these to test your local changes to components (for developers)
-// var Button = require('./Button');
-// var ButtonGroup = require('./ButtonGroup');
-// var ProcessingIndicator = require('./ProcessingIndicator');
-// var ProgressBar = require('./ProgressBar');
+var Button = require('./Button');
+var ButtonGroup = require('./ButtonGroup');
+var ProcessingIndicator = require('./ProcessingIndicator');
+var ProgressBar = require('./ProgressBar');
+var StatusIndicator = require('./StatusIndicator');
 
 (function () {
   React.render(
@@ -187,6 +188,59 @@ var ProcessingIndicator = CanonReact.ProgressBar;
           <ProgressBar progress={25} size='large'/>
           <br/>
           <ProgressBar progress={25} size='xlarge'/>
+        </div>
+      </div>
+      <div className='rs-detail-section'>
+        <div className='rs-detail-section-header'>
+          <h2>Status Indicators</h2>
+        </div>
+        <div className='rs-detail-section-body'>
+          <table>
+            <thead>
+              <tr>
+                <td>Status Indicator</td>
+                <td>Type</td>
+                <td>Source</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <StatusIndicator status='ok'>Active</StatusIndicator>
+                </td>
+                <td>Ok</td>
+                <td><pre><code>{"<StatusIndicator status='ok'>Active</StatusIndicator>"}</code></pre></td>
+              </tr>
+              <tr>
+                <td>
+                  <StatusIndicator status='processing'>Building</StatusIndicator>
+                </td>
+                <td>Processing</td>
+                <td><pre><code>{"<StatusIndicator status='processing'>Building</StatusIndicator>"}</code></pre></td>
+              </tr>
+              <tr>
+                <td>
+                  <StatusIndicator status='warning'>Warning</StatusIndicator>
+                </td>
+                <td>Warning</td>
+                <td><pre><code>{"<StatusIndicator status='warning'>Warning</StatusIndicator>"}</code></pre></td>
+              </tr>
+              <tr>
+                <td>
+                  <StatusIndicator status='error'>Error</StatusIndicator>
+                </td>
+                <td>Error</td>
+                <td><pre><code>{"<StatusIndicator status='error'>Warning</StatusIndicator>"}</code></pre></td>
+              </tr>
+              <tr>
+                <td>
+                  <StatusIndicator status='disabled'>Disabled</StatusIndicator>
+                </td>
+                <td>Disabled</td>
+                <td><pre><code>{"<StatusIndicator status='disabled'>Disabled</StatusIndicator>"}</code></pre></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>,
