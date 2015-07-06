@@ -1,11 +1,13 @@
+var React = require('react');
+
 var StatusIndicator = React.createClass({
   propTypes: {
-    status: React.PropTypes.string,
+    status: React.PropTypes.oneOf(['ok', 'error', 'processing', 'warning', 'disabled']),
     hidden: React.PropTypes.bool
   },
   getDefaultProps: function (){
     return {
-      status: "ok",
+      status: 'ok',
       hidden: false
     };
   },
@@ -20,11 +22,11 @@ var StatusIndicator = React.createClass({
     var classes, statusIndicatorTypes;
 
     statusIndicatorTypes = {
-      "error": "rs-status rs-status-error",
-      "processing": "rs-status rs-status-processing",
-      "warning": "rs-status rs-status-warning",
-      "ok": "rs-status rs-status-ok",
-      "disabled": "rs-status rs-status-disabled"
+      'error': 'rs-status rs-status-error',
+      'processing': 'rs-status rs-status-processing',
+      'warning': 'rs-status rs-status-warning',
+      'ok': 'rs-status rs-status-ok',
+      'disabled': 'rs-status rs-status-disabled'
     };
 
     classes = [];
