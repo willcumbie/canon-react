@@ -1,5 +1,3 @@
-var React = require('react');
-
 var SizeClasses = {
   'xsmall': 'rs-progress-xsmall',
   'small': 'rs-progress-small',
