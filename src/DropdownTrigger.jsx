@@ -99,7 +99,7 @@ var DropdownTrigger = React.createClass({
     tetherConfig = {
       attachment: 'top left',
       targetAttachment: 'bottom left',
-    }
+    };
 
     tetherConfig.element = React.findDOMNode(this._containerDiv);
     tetherConfig.target = React.findDOMNode(this);

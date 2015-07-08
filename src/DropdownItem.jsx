@@ -26,7 +26,7 @@ var DropdownItem = React.createClass({
     }
 
     return (
-      <li className={itemClasses.join(' ')}>
+      <li {...this.props} className={itemClasses.join(' ')} onClick={this._handleClick}>
         {this._innerElement()}
       </li>
     );
@@ -40,13 +40,11 @@ var DropdownItem = React.createClass({
         innerElement = <a className='rs-dropdown-link'>{this.props.children}</a>;
         break;
       case 'category':
-        innerElement = <span className="rs-dropdown-category">{this.props.children}</span>;
+        innerElement = <span className='rs-dropdown-category'>{this.props.children}</span>;
         break;
       case 'text':
-        innerElement = <span className="rs-dropdown-text">{this.props.children}</span>;
+        innerElement = <span className='rs-dropdown-text'>{this.props.children}</span>;
         break;
-      default:
-        innerElement = <div>{this.props.children}</div>;
     }
 
     return innerElement;

@@ -13,19 +13,19 @@ var Dropdown = React.createClass({
   },
 
   _classes: function () {
-    var classes, menuTypes;
+    var classes, dropdownTypes;
 
-    menuTypes = {
+    dropdownTypes = {
       'primary': 'rs-nav-item rs-dropdown rs-primary-dropdown',
       'utility': 'rs-nav-item rs-dropdown rs-utility-dropdown',
-      'action': 'rs-dropdown',
+      'action': 'rs-dropdown'
     };
 
     classes = [];
     classes.push(this.props.className);
 
-    if (this.props.type && menuTypes[this.props.type]) {
-      classes.push(menuTypes[this.props.type]);
+    if (this.props.type && dropdownTypes[this.props.type]) {
+      classes.push(dropdownTypes[this.props.type]);
     }
 
     return classes.join(' ');
