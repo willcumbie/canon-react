@@ -1,4 +1,5 @@
 var ProgressBar = require('../transpiled/ProgressBar');
+var React = require('react/addons');
 var TestUtils = React.addons.TestUtils;
 
 describe('ProgressBar', function () {

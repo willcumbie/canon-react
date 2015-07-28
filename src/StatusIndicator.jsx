@@ -1,3 +1,5 @@
+var React = require('react');
+
 var StatusIndicator = React.createClass({
   propTypes: {
     status: React.PropTypes.oneOf(['ok', 'error', 'processing', 'warning', 'disabled']),

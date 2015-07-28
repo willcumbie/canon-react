@@ -1,5 +1,7 @@
+var React = require('react');
+
 //Enable these to test current Canon React Version Components
-//var CanonReact = require('canon-react');
+// var CanonReact = require('canon-react');
 // var Button = CanonReact.Button;
 // var ButtonGroup = CanonReact.ButtonGroup;
 // var ProgressBar = CanonReact.ProgressBar;

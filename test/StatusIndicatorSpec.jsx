@@ -1,4 +1,5 @@
 var StatusIndicator = require('../transpiled/StatusIndicator');
+var React = require('react/addons');
 var TestUtils = React.addons.TestUtils;
 
 describe('StatusIndicator', function () {

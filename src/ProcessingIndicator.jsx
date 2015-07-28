@@ -1,3 +1,5 @@
+var React = require('react');
+
 var ProcessingIndicator = React.createClass({
   propTypes: {
     hidden: React.PropTypes.bool
