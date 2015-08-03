@@ -6,6 +6,7 @@ var React = require('react');
 // var ButtonGroup = CanonReact.ButtonGroup;
 // var ProgressBar = CanonReact.ProgressBar;
 // var ProcessingIndicator = CanonReact.ProgressBar;
+// var StatusIndicator = CanonReact.StatusIndicator;
 
 //Enable these to test your local changes to components (for developers)
 var Button = require('./Button');
