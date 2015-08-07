@@ -132,7 +132,6 @@ module.exports = function (grunt) {
     'browserify:test',
     'browserify:release',
     'uglify:build',
-    'clean:transpiled'
   ]);
 
   grunt.registerTask('demo-build', [
