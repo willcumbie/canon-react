@@ -1,6 +1,6 @@
 {
   "name": "canon-react",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Rackspace Canon components built with React",
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
     "react",
     "canon"
   ],
-  "main": "dist/canon-react.min.js",
+  "main": "src/index.js",
   "author": "Adam Pickeral <adam.pickeral@rackspace.com>",
   "license": "MIT",
   "peerDependencies": {
