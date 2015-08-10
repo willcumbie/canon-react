@@ -19,6 +19,17 @@
     "canon"
   ],
   "main": "transpiled/index.js",
+  "directories": {
+    "transpiled": "transpiled/",
+    "dist": "dist/"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "transpiled",
+    "dist"
+  ],
   "author": "Adam Pickeral <adam.pickeral@rackspace.com>",
   "license": "MIT",
   "peerDependencies": {
