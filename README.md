@@ -20,7 +20,19 @@ To run tests in chrome and watch for changes run `npm run test-watch`
 `npm install canon-react` will install the canon-react module inside of the `node_modules` directory of your current directory. `npm install canon-react -g` (may need sudo) will install the canon-react module globally.
 
 ### Using Components
-Access canon react components via `var component = require('canon-react').component;` after installation. An example of how to use canon-react components can be found in `node_modules/canon-react/demo/demo.jsx`
+After installation you can use canon react components.
+
+```javascript
+var Component = require('canon-react').Component;
+```
+
+ES6:
+
+```javascript
+import {Component} from 'canon-react';
+```
+
+An example of how to use canon-react components can be found in `node_modules/canon-react/demo/demo.jsx`
 
 # Roadmap
 This is a list of what is planned for the next release

@@ -1,6 +1,6 @@
 {
   "name": "canon-react",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Rackspace Canon components built with React",
   "repository": {
     "type": "git",
@@ -9,6 +9,7 @@
   "scripts": {
     "prepublish": "./prepublish.sh",
     "build": "./node_modules/.bin/grunt build",
+    "clean": "./node_modules/.bin/grunt clean",
     "demo-build": "./node_modules/.bin/grunt demo-build",
     "test-watch": "./node_modules/.bin/grunt watch 2>&1 >/dev/null & ./node_modules/karma/bin/karma start karma.dev.js",
     "test": "./node_modules/.bin/grunt build && ./node_modules/karma/bin/karma start karma.ci.js"
@@ -17,24 +18,18 @@
     "react",
     "canon"
   ],
-  "main": "src/index.js",
+  "main": "transpiled/index.js",
   "author": "Adam Pickeral <adam.pickeral@rackspace.com>",
   "license": "MIT",
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
-  "browserify-shim": {
-    "react": "global:React"
-  },
   "peerDependencies": {
     "react": ">=0.13.2"
   },
   "devDependencies": {
-    "browserify": "<4.0.0",
-    "browserify-shim": "^3.8.9",
+    "babel": "^5.5.8",
+    "babel-runtime": "^5.5.8",
+    "babelify": "^6.1.2",
     "grunt": "~0.4.2",
+    "grunt-babel": "^5.0.1",
     "grunt-browserify": "~1.3.0",
     "grunt-cli": "~0.1.13",
     "grunt-contrib-clean": "~0.5.0",
@@ -42,7 +37,6 @@
     "grunt-contrib-uglify": "~0.3.2",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-jsxhint": "~0.5.0",
-    "grunt-react": "~0.12.2",
     "grunt-shell": "~0.6.4",
     "karma": "^0.12.22",
     "karma-browserify": "~3.0.1",
@@ -54,7 +48,6 @@
     "karma-react-jsx-preprocessor": "0.1.1",
     "karma-spec-reporter": "0.0.13",
     "react": "~0.13.2",
-    "react-tools": "^0.13.2",
-    "reactify": "~1.1.0"
+    "react-tools": "^0.13.3"
   }
 }
